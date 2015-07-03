@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="com.cloakedninjas.country"
+        version="1.0.0">
+
+    <name>Country</name>
+    <description>This plugin gets the country from Android</description>
+    <author>Daniel Jackson</author>
+    <keywords>android, country</keywords>
+    <license>MIT</license>
+
+    <js-module src="www/country.js" name="Country">
+        <clobbers target="Country" />
+    </js-module>
+    <engines>
+        <engine name="cordova-android" version=">=3.0.0"/>
+    </engines>
+
+    <platform name="android">
+        <source-file src="src/com/cloakedninjas/cordova/plugins/Country.java" target-dir="src/com/cloakedninjas/cordova/plugins" />
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Country" >
+                <param name="android-package" value="com.cloakedninjas.cordova.plugins.Country"/>
+            </feature>
+        </config-file>
+    </platform>
+</plugin>
