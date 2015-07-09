@@ -1,5 +1,5 @@
 cordova-plugin-country
-===================
+======================
 
 Get the 2-letter ISO code from Android's Locale package. Useful when your device may not have GPS or cellular data.
 
